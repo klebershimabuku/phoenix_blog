@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :teacher, Teacher.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "kleber",
+  username: "postgres",
   password: "",
   database: "teacher_dev",
   hostname: "localhost",

@@ -14,5 +14,14 @@
 
 </ul>
 
+<%= render Teacher.CommentView, "new.html",
+                                conn: @conn,
+                                post: @post,
+                                comment_changeset: @comment_changeset %>
+
+<%= for comment <- @post.comments do %>
+  <p><%= comment.body %></p>
+<% end %>
+
 <%= link "Edit", to: post_path(@conn, :edit, @post) %>
 <%= link "Back", to: post_path(@conn, :index) %>
